@@ -5,13 +5,18 @@ public class JumpGame2 {
         int currStart = 0;
         int currReach = 0;
         int jumps = 0;
-        for(int i = 0;i<nums.length-1;i++){
-            if(i+nums[i]>currReach){
-                currReach = i+nums[i];
+        for (int i = 0; i < nums.length - 1; i++) {
+            if (i + nums[i] > currReach) {
+                currReach = i + nums[i];
 
             }
-            if(i == currStart){
+            if (i == currStart) {
                 jumps++;
                 currStart = currReach;
             }
+
+        }
+        return jumps;
+    }
 }
+
